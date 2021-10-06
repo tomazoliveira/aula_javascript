@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Minha página</title>
+    <meta charset="utf-8">
+    <!--está linkando o arquivo main.js com o html-->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<!--"onload" chama uma função que será executada assim que a pagina for carregada-->
+
+<body onload="load()">
+    <!--criando um botão e atribuindo a ele uma função definida em main.js -->
+    <button type="button" onclick="clicou()"> Clique aqui</button>
+
+    <!--criando um elemento com o id: agradecimento e ao clicar nele chama a função redirecionar -->
+    <p id="agradecimento" onclick="redirecionar()"></p>
+
+    <!-- ao passar o mouse, chama a funcao trocar e ao tirar o mouse chama a funcao voltar -->
+    <!--caso passe o id, chama a função sem parametro -->
+    <!--<p id="mousemove" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui</p> -->
+
+    <!-- nesses casos, não há a necessidade do ID, uma vez que o próprio elemento é passado como parametro na funcao do js -->
+    <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+    <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+
+    <!--exibe uma caixa de opções que o usuário pode escolher, o valor de cada opção fica salvo na variavel "value"-->
+    <select onchange="funcaoChange(this)">
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+    </select>
+
+
+</body>
+
+</html>
